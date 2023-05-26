@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	min-height: 100vh;
+}
+
+.scooter {
+    position: relative;
+    float: right;
+    height: 76px;
+    animation: mymove 10s infinite;
+    animation-timing-function: ease-in;
+  }
+  
+@keyframes mymove {
+    0% {left: -90%}
+    100% {left: 0%}
+    0%  {opacity: 0;}
+    30% {opacity: 1;}
+    90% {opacity: 1;}
+    100%{opacity: 0;}
+}
+.scooter::after{
+    content: url(/assets/images/Qbag\ model\ ps.png);
+    height: 600px;
+    width:600px;
+    position: absolute;
+    top: 10px;
+    left: 10px; 
+}
+
+@keyframes refade {
+    0% {opacity: 0;}
+    40%{opacity: 1;}
+    80%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+
+.dropdown-item:hover, .navbar-brand:hover {
+    color:#fffc03;
+}
+
+.nav-link:hover, .nav-link.active:hover  {
+    color: #fffc03;
+    scale: 120%;
+}
+
+.nav-item, .nav-link, .nav-link.disabled{
+    color: darkgray;
+    padding-right: 40px;
+}
+
+.nav-link:active    {
+    color: #fffc03;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+
+#mainnavbar:hover {
+    opacity: 90%;
+    background-color: black;
+    transition: .7s;
+    transition-timing-function: ease-in-out;
+}
+
+.navbar-brand img{
+    width: 50px;
+    height: 50px;
+    animation-name: fade;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+  
+@keyframes fade {
+  0% {opacity: 0;}
+  50%{opacity: 1;}
+  100%{opacity: 0;}
+}
+    
+
+.navbar-brand span    {
+  width: 100px;
+  height: 100px;
+  animation-name: intercolor;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+  
+@keyframes intercolor {
+  0% {color: #fffc03;}
+  50% {color: aliceblue;}
+  100% {color: #fffc03;}
+}
+
+.row {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.card {
+	position: relative;
+	width: 300px;
+	height: 400px;
+	background: rgba(255, 255, 255, 0.05);
+	margin: 20px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter: blur(10px);
+}
+
+.content {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: 0.5s;
+}
+
+.logobox {
+	position: relative;
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+  clip-path: circle();
+  background-image:url('/assets/images/001.gif');
+}
+
+.logobox img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.card h2 {
+  color: white;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: 500;
+	font-size: 20px;
+	text-align: center;
+	margin: 20px 0 10px;
+
+}
+
+.restolink {
+  display: flex;
+  position: absolute;
+	bottom: 100px;
+	list-style: none;
+  text-transform: uppercase;
+	transform: translateY(0px);
+	transition: .7s;
+	opacity: 0;
+}
+
+.card:hover .restolink {
+	transform: translateY(90px);
+  color: white;
+	letter-spacing: 3px;
+	font-weight: 500;
+	font-size: 20px;
+	text-align: center;
+	opacity: 1;
+}
+
+.card .restolink a {
+	font-size: 20px;
+}
+
+
+.card-text {
+  color: white;
+  font-size: 17px;
+  text-align: center;
+}
